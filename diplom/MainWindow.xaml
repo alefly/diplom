@@ -1,0 +1,34 @@
+﻿<Window x:Class="Forms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Forms"
+        mc:Ignorable="d"
+        Title="Система автоматического извлечения временных рядов" Height="450" Width="800">
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Работа с БД">
+                <MenuItem x:Name="buttonAdd" Header="Загрузить новую БД для извлечения временных рядов" Click="MenuItem_Click" ></MenuItem>
+                <MenuItem x:Name="buttonStop" Header="Отменить извлечение временных рядов из текущей БД" Click="MenuItem_Click_1" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Справка" ></MenuItem>
+            <MenuItem Header="О программе" ></MenuItem>
+        </Menu>
+        <ListBox x:Name="listBoxDB" HorizontalAlignment="Left" Height="259" Margin="10,142,0,0" VerticalAlignment="Top" Width="762">
+        </ListBox>
+        <Button x:Name="buttonCurrentDB" Content="Временные ряды текущей БД" HorizontalAlignment="Left" Margin="586,30,0,0" VerticalAlignment="Top" Width="186" Height="62" Click="buttonCurrentDB_Click"/>
+        <Label x:Name="LabelName" Content="База данных для извлечения временных рядов: " HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelTimer" Content="Регулярность: " HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+        <Label Content="Поиск" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.75,-0.538"/>
+        <ComboBox HorizontalAlignment="Left" Margin="586,115,0,0" VerticalAlignment="Top" Width="186">
+            <TextBlock>Алфавиту</TextBlock>
+            <TextBlock>Количеству извлеченных данных</TextBlock>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="66,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+        <Label Content="Сортировать по" HorizontalAlignment="Left" Margin="480,113,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelLastCheck" Content="Последняя проверка: " HorizontalAlignment="Left" Margin="204,66,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
